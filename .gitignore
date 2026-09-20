@@ -1,0 +1,16 @@
+# Claude Code local state
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Temp
+*.tmp
+*.log
