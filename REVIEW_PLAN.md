@@ -25,6 +25,12 @@ Found while reading your files against the official material. Worth fixing befor
 7. **"Linux has no guard page" is wrong** (Tlab1_NOTE.md — self-contradicted one paragraph later). Linux has guard pages too. The real xv6-vs-Linux difference: xv6's guard sits in one fixed spot forever (stack never grows); Linux's guard *moves* as its stack grows. (Part 4)
 8. **Trapframe save ≠ process switch** (Tlab1_NOTE.md — self-corrected later, confirmed by CLab1_Traps_Student.pdf). A trapframe is saved on **every** user-mode trap. Switching to a *different* process afterward is a separate, conditional decision the scheduler sometimes makes. (Part 2 / Part 4)
 9. **Heap growth direction, phrasing to fix**: heap grows up **away** from the stack, toward the trapframe — not "toward" the stack. No meeting-in-the-middle in xv6; the stack is frozen at one page forever. (Part 4)
+10. **class7.md, stride**: "pass = W / tickets" → that's the **stride**. Pass starts at 0 and grows by the stride on every run. Your table's numbers are right; only the label is swapped. (Part 6)
+11. **class7.md, exponential averaging**: "Initially 10 → t(0) = 10" → the 10 is the initial **guess τ(0)**, not a measured burst t. Lowercase t = real, τ/T = predicted. (Part 6)
+12. **class7.md, SRTN trace**: C's burst is **5**, not 6 ("C(6)" appears twice). (Part 6)
+13. **class7.md, relocatable code**: nothing to do with 0x80000000. Relocatable code expresses addresses *relative to the program's start*; the loader adds the real load address to each one once, at load time. (Part 10)
+14. **class7.md, EXP 6.1 Q4**: half-answered. Only execution-time binding can move after start, and it needs **hardware translation on every access** (an MMU: relocation/base + limit register, later a page table). (Part 10)
+15. **class8.md, EXP 6.5 Q1**: you have the per-request waste (236, 0, 511) but not the asked total: **747 bytes**. (Part 10)
 
 ---
 
@@ -90,7 +96,7 @@ Found while reading your files against the official material. Worth fixing befor
 - [ ] 6.8 Proportional share: stating the ratio instead of picking a rule-based winner
 - [ ] 6.9 Lottery scheduling — the algorithm, ticket mechanisms (currency/transfer/inflation), why it's fair on average but not in the short run
 - [ ] 6.10 Stride scheduling — the deterministic version, worked pass/stride example *(stop point: "the same shares, without the dice")*
-- [ ] **(future)** implementing lottery scheduling in xv6 (Lab A2), and Lecture 6 — Memory Management
+- [ ] **(future)** implementing lottery scheduling in xv6 (Lab A2)
 
 ## Part 7 — GINI's Practice Programs (what they are, before you run them)
 - [ ] 7.1 `spin` and `busy` — CPU-bound load generators for the scheduler (spin freezes the PC on one instruction; busy moves it through a real loop)
@@ -119,12 +125,38 @@ Found while reading your files against the official material. Worth fixing befor
 - [ ] 9.4 Implement Part C (`clockintr` sampling, ring buffer, averaging) — verify with three `spin` processes, watch `nrunnable` move 0→3
 - [ ] 9.5 Whatever breaks — debug using Part 8.11's checkpoint table before asking
 
+## Part 10 — Memory Management (Lecture 6 + class7–8)
+*Lecture material → notes in `review_understand/`.*
+- [ ] 10.1 The three opening questions (same address / stray store / free-but-refused), and why only registers + main memory are directly addressable
+- [ ] 10.2 Base and limit registers — the first protection mechanism: physical addresses, two comparisons per access, trap on failure, reloaded (privileged) on every context switch. **(GINI-specific)** xv6 has none; its page table does this job
+- [ ] 10.3 Address binding: compile time / load time / execution time — and why execution-time binding is what makes swapping, paging and VM possible (EXP 6.1)
+- [ ] 10.4 Logical vs. physical addresses and the MMU: relocation + limit (one comparison, one addition), base-and-bounds worked (EXP 6.2, EXP 6.3)
+- [ ] 10.5 Dynamic loading (and overlays) vs. linking — relocation + resolution, static vs. dynamic linking, why xv6 links statically (ulib/usys/printf/umalloc)
+- [ ] 10.6 The allocation problem: four demands that conflict, and contiguous allocation — why 1300 free bytes can't hold a 1030-byte process
+- [ ] 10.7 First / best / worst / next fit — which hole do you use (EXP 6.4 drill: 100K/500K/200K/300K/600K)
+- [ ] 10.8 Fragmentation: external vs. internal, the 50-percent rule (⅓ lost), compaction and why it needs execution-time binding (EXP 6.5)
+
+## Part 11 — Paging and Address Translation (Lecture 7 + class8–9)
+*Lecture material → notes in `review_understand/`.*
+- [ ] 11.1 The idea: fixed-size pages make external fragmentation impossible; the price is internal fragmentation in the last page (the L06 A/B/C example paged, EXP 7.1)
+- [ ] 11.2 Pages → frames: page number + offset, "only p is looked up," power-of-two page size, physical = frame × page size + offset. **(GINI-specific)** xv6 uses 4 KB pages → 12-bit offset
+- [ ] 11.3 Translation drills: tiny machine 21 → 117, logical 13 → physical 9, hex 0x45 → 0x665 — which bits change, which pass through (EXP 7.2)
+- [ ] 11.4 Inside a page-table entry (valid, protection, present, dirty, accessed), the linear-table lookup pseudocode, and the two problems: too slow, too big
+- [ ] 11.5 The TLB: hit vs. miss, hit rate, spatial vs. temporal locality — the ten-integer walkthrough (7 hits / 10)
+- [ ] 11.6 Effective access time arithmetic (10 ns / 3-level / 0.9 → 13 ns; EXP 7.3 at 0.98 and 0.80; best/worst case with 32-byte pages)
+- [ ] 11.7 The TLB on a context switch: flush vs. ASID tags. **(GINI-specific)** xv6 has no ASIDs and a separate kernel page table, so every trap writes satp + `sfence.vma` on the way in *and* out; Linux maps the kernel into every process instead
+- [ ] 11.8 Where do the tables live? The table must itself be paged → the page directory ("forced, not clever"); the 20-address drawing
+- [ ] 11.9 Hierarchical paging 10 + 10 + 12: indices are row numbers, entries store physical frame numbers; bits per level = log2(page size / PTE size); why the short field goes on top (39-bit, 4-byte PTE → 7 | 10 | 10 | 12)
+- [ ] 11.10 **(GINI-specific)** Sv39 — xv6's real scheme: 8-byte PTEs, 512 per page, 9 | 9 | 9 | 12, satp picks the mode *(class9.md stops around here)*
+- [ ] 11.11 Rest of L07, not yet in your class notes: hashed and inverted page tables, per-page protection (valid bit, internal fragmentation "harms no one"), sharing frames (reentrant code, xv6's trampoline), EXP 7.4
+- [ ] **(future)** Lecture 8 — Virtual Memory (a valid page living on disk)
+
 ---
 
 ## Sources referenced
 - `tut\t2\T02-ALab01-SysInfo-SysCall.pdf`, `tut\t2\t2note.md`
-- `lecture\1\N01-...pdf` through `lecture\5\N05-...pdf`
-- `Notes\class1.md`–`class6.md`, `Notes\tutorial2.md`
+- `lecture\1\N01-...pdf` through `lecture\7\N07-Paging-and-Address-Translation.pdf`
+- `Notes\class1.md`–`class9.md`, `Notes\tutorial2.md`
 - `assignment\A1\t_lab\T01-GINI-xv6-Orientation.pdf`, `TLab1_AddressSpace_Student.pdf`, `Tlab1_NOTE.md`
 - `assignment\A1\c_lab\C-Lab-01.pdf`, `CLab1_Traps_Student.pdf`
 - `GINI_Program\{walker,spin,grind,alloc,forktest,busy}.pdf`
