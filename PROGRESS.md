@@ -1,5 +1,34 @@
 # COMP 310 Review — Progress
 
+## ACTIVE: Midterm 1 cram (test Oct 20, L01–L08) — last updated 2026-10-11
+
+Everything lives in `midterm_review/`:
+- `00_quick_review.md` — one-pass review of L01–L08 + every slide problem (questions only), by lecture
+- `exam-hand-written-review/L0N.md` — your typed notes + solved slide problems, one file per lecture round
+- `sim_test_1.md` — 90-min, 100-pt simulation (A: 2022 midterm adapted, B: prof's lab questions, C: slide
+  problem types with new numbers). Answer in `sim_test_1_answers.md`, then say "grade".
+  (Answer key was kept in the session scratchpad; if it's gone in a new session, Claude recomputes it when grading.)
+
+Concept-pass rounds (one lecture each: Claude explains in chat → you type notes + solve slide problems → Claude checks/fixes):
+
+| Round | Lecture | Status |
+|---|---|---|
+| 1 | L01 What an OS is | ✓ done (checked + fixed) |
+| 2 | L02 Traps | ✓ done (checked + fixed; weak spots: syscall = sync, fault ≠ error, give final numbers) |
+| 3 | L03 Processes | ✓ done (checked + fixed; weak spots: segments EXP 3.2, states, full-sentence answers) |
+| 4 | L04 fork/exec/wait | ✓ done (checked + fixed; weak spot: xv6 zombie still has its address space) |
+| 5 | L05 Scheduling | **next** (60–75 min) |
+| 6 | L06 Memory management | 60–75 min |
+| 7 | L07 Paging + TLB | 75–90 min |
+| 8 | L08 Virtual memory | 75–90 min |
+
+**50% of rounds done (~40% by time); ~4.5–5.5 h left.** Plan: finish rounds by ~Oct 14 → sim test 1 ~Oct 15 →
+test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
+
+---
+
+## Original review plan (paused for the cram)
+
 Last updated: 2026-09-30
 
 **Overall: 60 of 77 in-scope sub-items covered (~78%; ~69% if counting the 10 skipped Part 0/1 items).** Parts 10–11 (Lectures 6–7) added 2026-09-30.
