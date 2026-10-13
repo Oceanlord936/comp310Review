@@ -1,6 +1,6 @@
 # COMP 310 Review — Progress
 
-## ACTIVE: Midterm 1 cram (test Oct 20, L01–L08) — last updated 2026-10-12
+## ACTIVE: Midterm 1 cram (test Oct 20, L01–L08) — last updated 2026-10-13
 
 Everything lives in `midterm_review/`:
 - `00_quick_review.md` — one-pass review of L01–L08 + every slide problem (questions only), by lecture
@@ -17,12 +17,12 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 | 2 | L02 Traps | ✓ done (checked + fixed; weak spots: syscall = sync, fault ≠ error, give final numbers) |
 | 3 | L03 Processes | ✓ done (checked + fixed; weak spots: segments EXP 3.2, states, full-sentence answers) |
 | 4 | L04 fork/exec/wait | ✓ done (checked + fixed; weak spot: xv6 zombie still has its address space) |
-| 5 | L05 Scheduling | **in progress** — notes typed; EXP 5.1(a) FCFS ✓, SJF ✓, SRTN (worked by Claude) ✓; left: RR q=4, 5.1(b) exp. avg, stride, Your turn 5.1–5.7 |
-| 6 | L06 Memory management | 60–75 min |
+| 5 | L05 Scheduling | ✓ done — EXP 5.1 FCFS/SJF/SRTN/RR q=4 + scoreboard, prediction table (first too-low at burst 4), stride W=10000 ✓. Weak spots: α goes on the REAL burst; SJF sorts by newest guess; RR arrival doesn't preempt. Prof's "Your turn" 5.1–5.7 deferred to sim test |
+| 6 | L06 Memory management | **next** (60–75 min) |
 | 7 | L07 Paging + TLB | 75–90 min |
 | 8 | L08 Virtual memory | 75–90 min |
 
-**~54% of rounds done (4 + ~⅓ of L05; ~45% by time); ~4–5 h left.** Plan: finish rounds by ~Oct 14 → sim test 1 ~Oct 15 →
+**~63% of rounds done (5 of 8; ~55% by time, L06–L08 are the longer ones); ~3.5–4 h left.** Plan: finish rounds by ~Oct 14 → sim test 1 ~Oct 15 →
 test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
 
 ---
