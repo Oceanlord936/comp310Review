@@ -18,7 +18,7 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 | 3 | L03 Processes | ✓ done (checked + fixed; weak spots: segments EXP 3.2, states, full-sentence answers) |
 | 4 | L04 fork/exec/wait | ✓ done (checked + fixed; weak spot: xv6 zombie still has its address space) |
 | 5 | L05 Scheduling | ✓ done — EXP 5.1 FCFS/SJF/SRTN/RR q=4 + scoreboard, prediction table (first too-low at burst 4), stride W=10000 ✓. Weak spots: α goes on the REAL burst; SJF sorts by newest guess; RR arrival doesn't preempt. Prof's "Your turn" 5.1–5.7 deferred to sim test |
-| 6 | L06 Memory management | **in progress** — notes typed for protection, base+limit, binding (1–3); left: MMU reloc+limit notes, EXP 6.1–6.5, part 2 (linking, fits, fragmentation) |
+| 6 | L06 Memory management | **in progress** — part 1 done: notes 1–4 (protection, base+limit, binding, MMU reloc+limit), EXP 6.1 ✓, EXP 6.2 ✓ (fixed: virtual 0 → base, give final numbers). Left: part 2 (linking, fits, fragmentation), EXP 6.3–6.5 |
 | 7 | L07 Paging + TLB | 75–90 min |
 | 8 | L08 Virtual memory | 75–90 min |
 
