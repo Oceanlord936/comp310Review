@@ -18,11 +18,11 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 | 3 | L03 Processes | ✓ done (checked + fixed; weak spots: segments EXP 3.2, states, full-sentence answers) |
 | 4 | L04 fork/exec/wait | ✓ done (checked + fixed; weak spot: xv6 zombie still has its address space) |
 | 5 | L05 Scheduling | ✓ done — EXP 5.1 FCFS/SJF/SRTN/RR q=4 + scoreboard, prediction table (first too-low at burst 4), stride W=10000 ✓. Weak spots: α goes on the REAL burst; SJF sorts by newest guess; RR arrival doesn't preempt. Prof's "Your turn" 5.1–5.7 deferred to sim test |
-| 6 | L06 Memory management | **in progress** — part 1 done: notes 1–4 (protection, base+limit, binding, MMU reloc+limit), EXP 6.1 ✓, EXP 6.2 ✓ (fixed: virtual 0 → base, give final numbers). Left: part 2 (linking, fits, fragmentation), EXP 6.3–6.5 |
-| 7 | L07 Paging + TLB | 75–90 min |
+| 6 | L06 Memory management | ✓ done — EXP 6.1–6.5 ✓. Weak spots: virtual 0 → base; give final numbers; best fit = smallest that fits (check every hole); round 2049 up to 5 units; context-switch regs live in PCB (not trapframe) |
+| 7 | L07 Paging + TLB | **next** (75–90 min) |
 | 8 | L08 Virtual memory | 75–90 min |
 
-**~63% of rounds done (5 of 8; ~55% by time, L06–L08 are the longer ones); ~3.5–4 h left.** Plan: finish rounds by ~Oct 14 → sim test 1 ~Oct 15 →
+**~75% of rounds done (6 of 8); ~2.5–3 h left (L07, L08). Behind plan by ~1 day: L07 Oct 15 → L08 + sim test 1 Oct 16 → test 2 Oct 17–18 → light final pass Oct 19.**
 test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
 
 ---
