@@ -51,3 +51,32 @@ A long computation such as finding large prime numbers (or video encoding, compi
 ==================================
 
 A7. ★ Pick a simple C program and determine where each of its variables is located in the memory layout (text, data, bss, heap, stack).
+
+Sample program (find where each numbered item lives: text, data, bss, heap, or stack):
+
+```c
+#include <stdlib.h>
+
+int count = 5;              // (1) count
+int table[100];             // (2) table
+const char *msg = "hi";     // (3) msg   and   (4) the string "hi" itself
+
+int square(int x) {         // (5) the code of square()   (6) parameter x
+    int result = x * x;     // (7) result
+    return result;
+}
+
+int main(void) {            // (8) the code of main()
+    static int calls = 0;   // (9) calls
+    int local = 10;         // (10) local
+    int *p = malloc(4 * sizeof(int));   // (11) the pointer p   (12) the 16 bytes p points to
+    p[0] = square(local);
+    calls++;
+    free(p);
+    return 0;
+}
+```
+
+Answer:
+
+
