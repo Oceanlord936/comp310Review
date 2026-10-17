@@ -20,9 +20,9 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 | 5 | L05 Scheduling | ✓ done — EXP 5.1 FCFS/SJF/SRTN/RR q=4 + scoreboard, prediction table (first too-low at burst 4), stride W=10000 ✓. Weak spots: α goes on the REAL burst; SJF sorts by newest guess; RR arrival doesn't preempt. Prof's "Your turn" 5.1–5.7 deferred to sim test |
 | 6 | L06 Memory management | ✓ done — EXP 6.1–6.5 ✓. Weak spots: virtual 0 → base; give final numbers; best fit = smallest that fits (check every hole); round 2049 up to 5 units; context-switch regs live in PCB (not trapframe) |
 | 7 | L07 Paging + TLB | ✓ done — notes 1–9, EXP 7.1–7.4 ✓ (7.4 part 2 answer given, check later). Weak spots: VPN bits from LOGICAL size, frame bits from PHYSICAL size; EAT miss = k·t_m + t_m (levels multiply); array start offset shifts page boundary (TLB loads one page per miss); table size = rows × PTE size (not page size) |
-| 8 | L08 Virtual memory | **next** (75–90 min) |
+| 8 | L08 Virtual memory | ✓ done — notes 1–9, EXP 8.1 ✓ (user), 8.2 FIFO/LRU ✓ (user, finished by Claude), OPT ✓, Belady + 8.3 + 8.4 answers written by Claude (check later). Weak spots: 10% of 200 = 20; P_miss = 1 − hit rate; FIFO evicts leftmost, hits do not reorder; OPT = farthest NEXT use, not future count |
 
-**~88% of rounds done (7 of 8); L08 left (~1.5 h). Then sim test 1 (Questions_2.pdf: skip red-text questions), refine mid-review-withProf.md, test 2, light final pass Oct 19.**
+**Round 1 COMPLETE (8 of 8, 2026-10-16). Next: sim test from Questions_2.pdf (skip red-text questions) → refine mid-review-withProf.md → test 2 on weak spots → light final pass Oct 19.**
 test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
 
 ---
