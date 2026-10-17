@@ -2,7 +2,7 @@
 
 Code listings for B12–B15 and B17 are copied from the PDF screenshots.
 
-**B12.** What would be the output from the program at LINE C and LINE P?
+**B12.** *(optional: uses threads, which the prof hasn't taught yet)* What would be the output from the program at LINE C and LINE P?
 
 ```c
 #include <pthread.h>
@@ -37,9 +37,6 @@ void *runner(void *param) {
 }
 ```
 
-Answer:
-
-
 **B13.** How many processes are created in the following program?
 
 ```c
@@ -56,9 +53,6 @@ int main()
     return 0;
 }
 ```
-
-Answer:
-
 
 **B14.** When will the program reach LINE J (i.e. execute `printf("LINE J")`)?
 
@@ -92,10 +86,7 @@ int main()
 }
 ```
 
-Answer:
-
-
-**B15.** What are the pid values in the following program? (Assume the actual pids of the parent and child are 2600 and 2603.)
+**B15.** What are the pid values in the following program? (Textbook version assumes the actual pids of the parent and child are 2600 and 2603.)
 
 ```c
 #include <sys/types.h>
@@ -128,9 +119,6 @@ int main()
     return 0;
 }
 ```
-
-Answer:
-
 
 **B16.** What is a zombie process?
 
@@ -167,9 +155,6 @@ int main()
     return 0;
 }
 ```
-
-Answer:
-
 
 **B18.** Give an example where pipes are more suitable than sockets.
 
