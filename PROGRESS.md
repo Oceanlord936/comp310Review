@@ -24,7 +24,7 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 
 **Round 1 COMPLETE (8 of 8, 2026-10-16).**
 
-**Round 2 (started 2026-10-17): Questions_2 review** in `midterm_review/Q2_review.md` — every non-red question from the prof's bank, by part (A intro/processes 12, B fork/pipes 9, C scheduling 10, D memory 13, E VM 12). You answer, Claude checks. B12–B15, B17 need the code pasted (images in the PDF). E7 buddy system optional (not in prof's notes). Then: refine mid-review-withProf.md → test on weak spots → light final pass Oct 19.
+**Round 2 (started 2026-10-17): Questions_2 review** in `midterm_review/Q2_review.md` (question list) with your answers in `exam-hand-written-review/Q2_partA.md` … `Q2_partE.md` (one file per part; A done 2026-10-17) — every non-red question from the prof's bank, by part (A intro/processes 12, B fork/pipes 9, C scheduling 10, D memory 13, E VM 12). You answer, Claude checks. B12–B15, B17 need the code pasted (images in the PDF). E7 buddy system optional (not in prof's notes). Then: refine mid-review-withProf.md → test on weak spots → light final pass Oct 19.
 test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
 
 ---
