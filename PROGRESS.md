@@ -22,7 +22,9 @@ Concept-pass rounds (one lecture each: Claude explains in chat → you type note
 | 7 | L07 Paging + TLB | ✓ done — notes 1–9, EXP 7.1–7.4 ✓ (7.4 part 2 answer given, check later). Weak spots: VPN bits from LOGICAL size, frame bits from PHYSICAL size; EAT miss = k·t_m + t_m (levels multiply); array start offset shifts page boundary (TLB loads one page per miss); table size = rows × PTE size (not page size) |
 | 8 | L08 Virtual memory | ✓ done — notes 1–9, EXP 8.1 ✓ (user), 8.2 FIFO/LRU ✓ (user, finished by Claude), OPT ✓, Belady + 8.3 + 8.4 answers written by Claude (check later). Weak spots: 10% of 200 = 20; P_miss = 1 − hit rate; FIFO evicts leftmost, hits do not reorder; OPT = farthest NEXT use, not future count |
 
-**Round 1 COMPLETE (8 of 8, 2026-10-16). Next: sim test from Questions_2.pdf (skip red-text questions) → refine mid-review-withProf.md → test 2 on weak spots → light final pass Oct 19.**
+**Round 1 COMPLETE (8 of 8, 2026-10-16).**
+
+**Round 2 (started 2026-10-17): Questions_2 review** in `midterm_review/Q2_review.md` — every non-red question from the prof's bank, by part (A intro/processes 12, B fork/pipes 9, C scheduling 10, D memory 13, E VM 12). You answer, Claude checks. B12–B15, B17 need the code pasted (images in the PDF). E7 buddy system optional (not in prof's notes). Then: refine mid-review-withProf.md → test on weak spots → light final pass Oct 19.
 test 2 on weak spots ~Oct 17–18 → light final pass Oct 19.
 
 ---
