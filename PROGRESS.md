@@ -11,9 +11,8 @@ Files live in `L09_L10_review/` (L09.md, L10.md, T03.md). Sources: `lecture/9/N0
 |---|---|---|
 | 9a | L09 part 0–1: races, critical section, 4 requirements, software attempts, Peterson (EXP 9.1, 9.2) | ✓ done — answers written by Claude (user asked for explanations first); notes on Peterson me/other, "later write overwrites earlier", 4-way-stop analogy. Weak spots: who STORES last decides the lost update; requirement numbers (3) progress / (4) bounded waiting; one CPU = no speed-up, spinning only wastes |
 | 9b | L09 part 2 (hardware): barriers, TAS, CAS, atomics, xv6 spinlock (EXP 9.3 + in-class bonus). Notes in `L09b.md` | ✓ done (2026-10-23) — notes typed by user; code re-fenced in ```c blocks (Prettier was mangling `/* */`, `*`, `__`); EXP 9.3 answers written by Claude on request. Key points: TAS merges test+set (no gap); failed CAS re-reads and retries (lock-free); interrupts off in acquire or a same-CPU handler deadlocks (tickslock); 1 core → 0 spins |
-| 9c | L09 part 3 (waiting without spinning): mutex, semaphores (busy + blocking), bounded buffer, monitors, condition variables (Hoare vs Mesa), xv6 sleep/wakeup (EXP 9.4). Notes go in `L09c.md` | **next** |
+| 9c + T3 | L09 part 3 (waiting without spinning) merged with Tutorial 3: mutex, semaphores (busy + blocking, initial values), patterns (signalling, rendezvous, mutex, barrier), bounded buffer, monitors, condition variables (Hoare vs Mesa), xv6 sleep/wakeup, dining philosophers (EXP 9.4 + T3.1–T3.5). Notes go in `L09c.md` | **mostly done (2026-10-23)** — notes typed + checked (fixed: mutex trace, barrier's two counters, spaces/items timeline). EXP 9.4: 1 ✗ (gave start values; answer mutex 1, empty 4, full 1), 2 ✓ idea + run added, 3 ✓, 4 answered by Claude (Mesa if → while). **Still open: T3.1–T3.5** (not attempted). Paused for A-Lab-02 |
 | 10 | L10 up to direct access: file, attributes, operations, open-file tables, xv6 struct file, types, sequential/direct access (EXP 10.1, 10.2) | |
-| T3 | Tutorial 3: semaphore patterns (signalling, rendezvous, mutex, barrier, producer/consumer, dining philosophers) | |
 
 ---
 
