@@ -1,6 +1,23 @@
 # COMP 310 Review — Progress
 
-## ACTIVE: Midterm 1 cram (test Oct 20, L01–L08) — last updated 2026-10-13
+## ACTIVE: L09–L10 + Tutorial 3 concept pass (started 2026-10-23, after midterm 1)
+
+Same format as the midterm round 1: Claude explains a concept block in chat → you type your notes and solve the slide
+problems (EXP N.x) in the file → Claude checks and fixes the file.
+Files live in `L09_L10_review/` (L09.md, L10.md, T03.md). Sources: `lecture/9/N09-...pdf`, `lecture/10/N10-The-File-System-Interface.pdf`
+(slides 1–14 only: up to Direct access + EXP 10.2), `Notes/class12–14.md` (L09 in class), `Notes/tutorial3.md`.
+
+| Round | Material | Status |
+|---|---|---|
+| 9a | L09 part 0–1: races, critical section, 4 requirements, software attempts, Peterson (EXP 9.1, 9.2) | ✓ done — answers written by Claude (user asked for explanations first); notes on Peterson me/other, "later write overwrites earlier", 4-way-stop analogy. Weak spots: who STORES last decides the lost update; requirement numbers (3) progress / (4) bounded waiting; one CPU = no speed-up, spinning only wastes |
+| 9b | L09 part 2 (hardware): barriers, TAS, CAS, atomics, xv6 spinlock (EXP 9.3 + in-class bonus). Notes in `L09b.md` | ✓ done (2026-10-23) — notes typed by user; code re-fenced in ```c blocks (Prettier was mangling `/* */`, `*`, `__`); EXP 9.3 answers written by Claude on request. Key points: TAS merges test+set (no gap); failed CAS re-reads and retries (lock-free); interrupts off in acquire or a same-CPU handler deadlocks (tickslock); 1 core → 0 spins |
+| 9c | L09 part 3 (waiting without spinning): mutex, semaphores (busy + blocking), bounded buffer, monitors, condition variables (Hoare vs Mesa), xv6 sleep/wakeup (EXP 9.4). Notes go in `L09c.md` | **next** |
+| 10 | L10 up to direct access: file, attributes, operations, open-file tables, xv6 struct file, types, sequential/direct access (EXP 10.1, 10.2) | |
+| T3 | Tutorial 3: semaphore patterns (signalling, rendezvous, mutex, barrier, producer/consumer, dining philosophers) | |
+
+---
+
+## DONE: Midterm 1 cram (test Oct 20, L01–L08) — last updated 2026-10-13
 
 Everything lives in `midterm_review/`:
 - `00_quick_review.md` — one-pass review of L01–L08 + every slide problem (questions only), by lecture
