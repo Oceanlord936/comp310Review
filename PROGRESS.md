@@ -1,6 +1,24 @@
 # COMP 310 Review — Progress
 
-## ACTIVE: L09–L10 + Tutorial 3 concept pass (started 2026-10-23, after midterm 1)
+## ACTIVE: L09 recap → L12 guide rounds (started 2026-10-30)
+
+Guide: `L09_L10_review/L09_L11_guide.md` (concepts + questions, no answers). You hand-type concept notes in `L09_L10_review/L09_L11_notes.md` (in Notepad++). Question answers go later in a separate `L09_L11_answers.md` or in chat, then say "check round X"; Claude checks and writes the right answers into the answers file.
+Notes `class14–16.md` and `tutorial4.md` were corrected in place on 2026-10-30; originals in `L09_L10_review/notes_original/`. N10-The-File-System-Interface is skipped by the prof, so the L10 row in the table below is replaced by round D. T3.1–T3.5's text was never saved; rounds B and C replace them.
+
+| Round | Material | Status |
+|---|---|---|
+| A | L09 quick recap | notes typed (sections 1-7); questions A1-A9 not done |
+| B | Semaphore vs monitor vs condition variable | **in progress** - notes typed through section 4 (flag or count); next: section 5 Hoare vs Mesa, then 6-7; questions B1-B7 not done |
+| C | Tutorial 4 examples | not started |
+| D | L10 concepts (N10-File-System) | not started |
+| E | L11 implementation + disk access examples | not started |
+| F | L12 so far (Amdahl, up to EXP-16) | not started |
+
+To confirm with prof/TA: does the root i-node count as a disk access (2k+1 vs 2k+2); the T4 cwait/csignal lines that were reconstructed.
+
+---
+
+## Earlier: L09–L10 + Tutorial 3 concept pass (started 2026-10-23, after midterm 1)
 
 Same format as the midterm round 1: Claude explains a concept block in chat → you type your notes and solve the slide
 problems (EXP N.x) in the file → Claude checks and fixes the file.
