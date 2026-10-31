@@ -7,12 +7,14 @@ Notes `class14–16.md` and `tutorial4.md` were corrected in place on 2026-10-30
 
 | Round | Material | Status |
 |---|---|---|
-| A | L09 quick recap | notes typed (sections 1-7); questions A1-A9 not done |
-| B | Semaphore vs monitor vs condition variable | **in progress** - notes typed through section 4 (flag or count); next: section 5 Hoare vs Mesa, then 6-7; questions B1-B7 not done |
-| C | Tutorial 4 examples | not started |
-| D | L10 concepts (N10-File-System) | not started |
-| E | L11 implementation + disk access examples | not started |
-| F | L12 so far (Amdahl, up to EXP-16) | not started |
+| A | L09 quick recap | notes typed ✓; questions A1-A9 not done |
+| B | Semaphore vs monitor vs condition variable | notes typed ✓; questions B1-B7 not done |
+| C | Tutorial 4 examples | notes typed ✓; questions C1-C10 not done |
+| D | L10 concepts (N10-File-System) | notes typed ✓; questions D1-D10 not done |
+| E | L11 implementation + disk access examples | notes typed ✓; questions E1-E13 not done |
+| F | L12 so far (Amdahl, up to EXP-16) | notes typed ✓; questions F1-F5 not done |
+
+**Status: all concept notes hand-typed in `L09_L11_notes.md`. Next: answer the questions (54, round A first) in `L09_L11_answers.md`, then say "check round X".**
 
 To confirm with prof/TA: does the root i-node count as a disk access (2k+1 vs 2k+2); the T4 cwait/csignal lines that were reconstructed.
 
