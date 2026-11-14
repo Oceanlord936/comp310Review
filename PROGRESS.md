@@ -7,13 +7,13 @@ Notes: `Notes/tutorial5.md` (checked + filled in on 2026-11-13), `class19.md` (r
 
 | Part | Material | Status |
 |---|---|---|
-| 1 | T1–T10: Tutorial 5 question types with new numbers | concepts ✓ (sections 4–10 in weekend_notes.md); questions later |
+| 1 | T1–T10: Tutorial 5 question types with new numbers | concepts ✓ (sections 4–10 in weekend_notes_l12_l14.md); questions later |
 | 2a | Rest of L14: prevention, trajectories, claim edges, Banker's, detection, recovery, slide 42 (L1–L7) | concepts ✓ (sections 1–3, 7–8); questions later |
 | 2b | L15 IPC: FDT, redirection, pipes, message passing, sockets, RPC (P1–P8) | concepts ✓ (11a–11d in L15_review/L15_notes.md); questions later |
 | later | Old rounds R, G, H, I questions in `L12_L14_guide.md` | |
 
 A-Lab-03: DONE (pass 1 + recorded pass 2).
-2026-11-14: concept pass for Tutorial 5 + rest of L14 done (sections 1–10, notes in `L12_L14_review/weekend_notes.md`). L15 concept pass done the same day (`L15_review/L15_notes.md`). **Next: practice questions T1–T10, L1–L7, P1–P8, then old rounds R, G, H, I.** Weak spots seen today: in the Banker's pretend step change all 3 (avail, requester's hold AND need) and check the requester too; finished process returns its CURRENT hold; deadlocked = everyone left when the loop stops; a reader must close its own copy of p[1].
+2026-11-14: concept pass for Tutorial 5 + rest of L14 done (sections 1–10, notes in `L12_L14_review/weekend_notes_l12_l14.md`). L15 concept pass done the same day (`L15_review/L15_notes.md`). **Next: practice questions T1–T10, L1–L7, P1–P8, then old rounds R, G, H, I.** Weak spots seen today: in the Banker's pretend step change all 3 (avail, requester's hold AND need) and check the requester too; finished process returns its CURRENT hold; deadlocked = everyone left when the loop stops; a reader must close its own copy of p[1].
 
 ---
 
