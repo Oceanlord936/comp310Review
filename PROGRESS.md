@@ -1,6 +1,42 @@
 # COMP 310 Review — Progress
 
-## ACTIVE: L09 recap → L12 guide rounds (started 2026-10-30)
+## ACTIVE: weekend of 2026-11-14 — Tutorial 5 + rest of L14 + L15
+
+Guide: `L12_L14_review/weekend_guide.md`. Answers in `L12_L14_review/weekend_answers.md` or chat, then "check T1" etc.
+Notes: `Notes/tutorial5.md` (checked + filled in on 2026-11-13), `class19.md` (rest of L14), `class20.md` (all of L15).
+
+| Part | Material | Status |
+|---|---|---|
+| 1 | T1–T10: Tutorial 5 question types with new numbers | concepts ✓ (sections 4–10 in weekend_notes.md); questions later |
+| 2a | Rest of L14: prevention, trajectories, claim edges, Banker's, detection, recovery, slide 42 (L1–L7) | concepts ✓ (sections 1–3, 7–8); questions later |
+| 2b | L15 IPC: FDT, redirection, pipes, message passing, sockets, RPC (P1–P8) | concepts ✓ (11a–11d in L15_review/L15_notes.md); questions later |
+| later | Old rounds R, G, H, I questions in `L12_L14_guide.md` | |
+
+A-Lab-03: DONE (pass 1 + recorded pass 2).
+2026-11-14: concept pass for Tutorial 5 + rest of L14 done (sections 1–10, notes in `L12_L14_review/weekend_notes.md`). L15 concept pass done the same day (`L15_review/L15_notes.md`). **Next: practice questions T1–T10, L1–L7, P1–P8, then old rounds R, G, H, I.** Weak spots seen today: in the Banker's pretend step change all 3 (avail, requester's hold AND need) and check the requester too; finished process returns its CURRENT hold; deadlocked = everyone left when the loop stops; a reader must close its own copy of p[1].
+
+---
+
+## ACTIVE: recall + L12 rest, L13, L14 (to slide 14), then A-Lab-03 (started 2026-11-07)
+
+Guide: `L12_L14_review/L12_L14_guide.md`. Same format: you type notes in `L12_L14_review/L12_L14_notes.md`, answers in `L12_L14_answers.md` or chat, then "check round X".
+class17/class18 fixed in place (originals in `L12_L14_review/notes_original/`).
+
+| Round | Material | Time | Status |
+|---|---|---|---|
+| R | Recall: 15 picked questions from A–F | 40 min | |
+| G | Rest of L12: SMP, NUMA, clusters, EXP-17 | 20 min | |
+| H | L13 multi-threading (EXP-71 ×2) | 60–70 min | |
+| I | L14 deadlocks slides 1–14 | 40 min | |
+| Lab | A-Lab-03 buddy allocator + megapages (due Nov 17) | ~4 h | Part 0 / A / B / C |
+
+The old A–F questions (54) are replaced by round R's 15.
+**Today 2026-11-07 (real time):** 1) concepts only for G, H, I, typing notes, no questions (≈ 2 h) so you can keep up in class next week; 2) A-Lab-03 your usual way: pass 1 on GINI step by step + notes in `assignment/Alab/3/Alab03note.md` (Part 0 + A ≈ 2 h, B ≈ 1.5 h, C ≈ 2.5 h), pass 1 is with GINI recording OFF; pass 2 = the recorded run you submit, done fast from your notes (≈ 1 h). All questions (R, G, H, I) pushed to later, before the exam.
+**Status end of 2026-11-07:** concept pass G, H, I ✓. A-Lab-03 pass 1 ✓ — Check all 10/10 (0, A1–A2, B1–B3, C1–C4). Your code backups: `A-lab3-backup/parta`, `partb`. **Next: pass 2 = recorded run from your notes, then submit (due Nov 17).** After that: questions R, G, H, I.
+
+---
+
+## Earlier: L09 recap → L12 guide rounds (started 2026-10-30)
 
 Guide: `L09_L10_review/L09_L11_guide.md` (concepts + questions, no answers). You hand-type concept notes in `L09_L10_review/L09_L11_notes.md` (in Notepad++). Question answers go later in a separate `L09_L11_answers.md` or in chat, then say "check round X"; Claude checks and writes the right answers into the answers file.
 Notes `class14–16.md` and `tutorial4.md` were corrected in place on 2026-10-30; originals in `L09_L10_review/notes_original/`. N10-The-File-System-Interface is skipped by the prof, so the L10 row in the table below is replaced by round D. T3.1–T3.5's text was never saved; rounds B and C replace them.
