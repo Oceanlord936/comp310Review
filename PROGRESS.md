@@ -1,5 +1,20 @@
 # COMP 310 Review — Progress
 
+## ACTIVE: L16 Advanced Scheduling (started 2026-11-17)
+
+Slides: `lecture/16/N16-Advanced-Scheduling.pdf` (50 slides). Class stopped at **slide 27 (load balancing)**.
+Notes: `Notes/class21.md` — filled in by Claude from the slides + `transcripte/nov17th.md` (original in `L15_review/notes_original/class21.md`).
+
+| Part | Material | Status |
+|---|---|---|
+| L16a | Job mix, RR wait (n−1)×q, MLQ + labels, MLFQ rules 1–5, examples, starvation, boost, aging, gaming + total-use accounting, PCS vs SCS, multiprocessor queues, push / pull load balancing (slides 2–27) | first-day concept pass in chat ✓ (2026-11-17) |
+| L16b | Processor affinity, hardware threads, real-time: latency, RMS, EDF, admission control (slides 28–49) | next class |
+| L16 practice | Slide 50, problems 1–5 | after L16b |
+
+Key points from the chat pass: quantum = length of one RR turn (restarts every turn); allotment = total CPU at a level (I/O doesn't reset it, only a queue change does) — that's what beats gaming. PCS ≈ many-to-one / many-to-many (share depends on # LWPs), SCS = one-to-one (more threads → more CPU). Push = periodic, evens all queues; pull = an idle core grabs work right away; both cost warm cache.
+
+---
+
 ## ACTIVE: weekend of 2026-11-14 — Tutorial 5 + rest of L14 + L15
 
 Guide: `L12_L14_review/weekend_guide.md`. Answers in `L12_L14_review/weekend_answers.md` or chat, then "check T1" etc.
