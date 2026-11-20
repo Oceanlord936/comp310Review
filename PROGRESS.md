@@ -1,6 +1,25 @@
 # COMP 310 Review — Progress
 
-## ACTIVE: L16 Advanced Scheduling (started 2026-11-17)
+## ACTIVE: L16 hand-typed review + Tutorial 6 redo (2026-11-20)
+
+Folder: `L16_review/` — `L16_notes.md` (chunks 1–9), `tutorial6_notes.md`, `i-node-underatnding.md` (i-node basics, 8 sections); originals of the last two in `L16_review/notes_original/`.
+Class notes (OneDrive `Notes/`): `class21.md` (Nov 17, slides 2–27), `class22.md` (Nov 19: MLFQ board examples + real-time slides 32–46; made by Claude from `transcripte/nov19th.md`), `tutorial6.md` (cleaned, fix marks removed; originals in `L15_review/notes_original/tutorial6.md` + `tutorial6_part2.md`).
+Exam syllabus stops at scheduling (prof, Nov 19). N17 Secondary Storage (`lecture/17`, 49 slides) posted but **not taught yet**.
+
+| Chunk | Material | Status |
+|---|---|---|
+| 1–6 | Job mix, RR (n−1)q → MLQ, MLFQ rules, example + starvation/boost/aging, gaming + allotment, PCS/SCS/LWPs + multi-core push/pull | typed ✓ |
+| 7–9 | Real-time soft/hard, latency, task spec, admission control, RMS + bound, EDF | typed ✓ |
+| cut | Affinity + hardware threads (not taught), extra MLFQ/RMS examples | read class22 later |
+| T6 A | i-node basics + setup/rules/table + path lookup + symlink | typed ✓ |
+| **T6 B** | **sparse file, holes (seek+read), append to notes (2 R + 6 W)** | **next** |
+| later | Slide 50 practice; N17 when taught (class23); T-labs on deadlocks + file system coming | |
+
+Confusions cleared today: i-node NUMBER (ID) vs i-node BLOCK (disk block holding it, 2 + floor(x/8)) — no layers of i-nodes; layers only in the indirect pointers (index blocks in the data area, like page tables); one file = one i-node; numbers in a directory's contents are i-node numbers; LWP = a kernel thread the library runs user threads on (#LWPs = how many can run/block at once). Open: MLFQ preempted job to front (slide) vs end (prof said).
+
+---
+
+## Earlier: L16 Advanced Scheduling first pass (2026-11-17)
 
 Slides: `lecture/16/N16-Advanced-Scheduling.pdf` (50 slides). Class stopped at **slide 27 (load balancing)**.
 Notes: `Notes/class21.md` — filled in by Claude from the slides + `transcripte/nov17th.md` (original in `L15_review/notes_original/class21.md`).
@@ -8,8 +27,8 @@ Notes: `Notes/class21.md` — filled in by Claude from the slides + `transcripte
 | Part | Material | Status |
 |---|---|---|
 | L16a | Job mix, RR wait (n−1)×q, MLQ + labels, MLFQ rules 1–5, examples, starvation, boost, aging, gaming + total-use accounting, PCS vs SCS, multiprocessor queues, push / pull load balancing (slides 2–27) | first-day concept pass in chat ✓ (2026-11-17) |
-| L16b | Processor affinity, hardware threads, real-time: latency, RMS, EDF, admission control (slides 28–49) | next class |
-| L16 practice | Slide 50, problems 1–5 | after L16b |
+| L16b | Processor affinity, hardware threads, real-time: latency, RMS, EDF, admission control (slides 28–49) | taught Nov 19 (to slide 46), typed 2026-11-20 |
+| L16 practice | Slide 50, problems 1–5 | later |
 
 Key points from the chat pass: quantum = length of one RR turn (restarts every turn); allotment = total CPU at a level (I/O doesn't reset it, only a queue change does) — that's what beats gaming. PCS ≈ many-to-one / many-to-many (share depends on # LWPs), SCS = one-to-one (more threads → more CPU). Push = periodic, evens all queues; pull = an idle core grabs work right away; both cost warm cache.
 
