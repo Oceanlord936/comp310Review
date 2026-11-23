@@ -1,5 +1,20 @@
 # COMP 310 Review — Progress
 
+## Labs status (2026-11-22)
+
+| Lab | Due | Status |
+|---|---|---|
+| T-Lab 02 Scheduler | Nov 21 | submitted 2026-11-20 |
+| T-Lab 03 Deadlocks | Nov 25 | submitted 2026-11-22 (13 goals + 3 questions) |
+| T-Lab 04 File system | Nov 27 | submitted 2026-11-22 (12 goals + 3 questions) |
+| **A-Lab 04 Semaphores** | **Dec 4** | **next** — pre-round then recorded round (~10 h); handout `assignment/Alab/4/ALab04_Semaphores_Student.pdf` |
+
+GINI updated to 6.22.22 (needs ≥ 6.22.21 for A-Lab 04).
+T-Lab 04 rules that differ from tutorial 6 notes: within one call a block already read is free (symlink open = 10 R, not 17); any call that takes/frees blocks costs superblock R+W; an existing index block that gets new entries is R+W; to find a single-range block you must read its index block first.
+After A-Lab 04: final review — `Final_mock/`, redo hand-typed notes from L09 on, course-pack questions; tutorial 6 part B review.
+
+---
+
 ## ACTIVE: L16 hand-typed review + Tutorial 6 redo (2026-11-20)
 
 Folder: `L16_review/` — `L16_notes.md` (chunks 1–9), `tutorial6_notes.md`, `i-node-underatnding.md` (i-node basics, 8 sections); originals of the last two in `L16_review/notes_original/`.
