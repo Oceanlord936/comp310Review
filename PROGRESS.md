@@ -7,7 +7,9 @@
 | T-Lab 02 Scheduler | Nov 21 | submitted 2026-11-20 |
 | T-Lab 03 Deadlocks | Nov 25 | submitted 2026-11-22 (13 goals + 3 questions) |
 | T-Lab 04 File system | Nov 27 | submitted 2026-11-22 (12 goals + 3 questions) |
-| **A-Lab 04 Semaphores** | **Dec 4** | **next** — pre-round then recorded round (~10 h); handout `assignment/Alab/4/ALab04_Semaphores_Student.pdf` |
+| A-Lab 04 Semaphores | Dec 4 | submitted 2026-11-24 (one recorded round; stages 0–C3 all pass) |
+
+**All labs done.** Next: final exam review. Prof (Nov 20 tutorial): 20 questions, every lecture, long but scaled to the midterm average, do short questions first; FS table on the exam is in the tutorial 6 format. `Notes/tutorial6.md` updated from `transcripte/nov20th.md` (2026-11-24).
 
 GINI updated to 6.22.22 (needs ≥ 6.22.21 for A-Lab 04).
 T-Lab 04 rules that differ from tutorial 6 notes: within one call a block already read is free (symlink open = 10 R, not 17); any call that takes/frees blocks costs superblock R+W; an existing index block that gets new entries is R+W; to find a single-range block you must read its index block first.
